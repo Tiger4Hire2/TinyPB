@@ -14,9 +14,15 @@ jobs:
     # See: https://circleci.com/docs/2.0/configuration-reference/#steps
     steps:
       - checkout
-      - run:
-          name: "Say hello"
-          command: "echo Hello, World!"
+      - makebuilddir:
+          name: "make build space"
+          command: "mkdir build"
+      - config:
+          name: "config"
+          command: "cd build && cmake .."
+      - build:
+          name: "build"
+          command: "cd build && make"
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
