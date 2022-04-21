@@ -13,6 +13,7 @@ jobs:
     # See: https://circleci.com/docs/2.0/configuration-reference/#steps
     steps:
       - checkout
+      - run: apt install cmake
       - run: "mkdir build"
       - run: "cd build && cmake .."
       - run: "cd build && make"
