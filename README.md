@@ -104,3 +104,8 @@ That said, if you are a C++ programmer, then the problems are in C++, and theref
 # NOTE:
 It looks like I need to backport it to C++17 to get the ci to work, as C++20==GNUC++2a, which is ancient
 If you have a compiler from this decade, it should build the tests using cmake.
+
+# To try it
+Path the "include" directory. Include the "protobuf.h" file. Define your message in C++ struct(s), see "protobuf.cpp" for examples.
+Then pipe you structure to/from a byte array.
+I might extend with a networking layer, but RPC. RPC sucks. That's why everyone uses async-RPC, but async-RPC is just a confused metaphor. It's like having an async-mutex! Race-conditions, anyone?
