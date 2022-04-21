@@ -108,4 +108,4 @@ If you have a compiler from this decade, it should build the tests using cmake.
 # To try it
 Path the "include" directory. Include the "protobuf.h" file. Define your message in C++ struct(s), see "protobuf.cpp" for examples.
 Then pipe you structure to/from a byte array.
-I might extend with a networking layer, but RPC. RPC sucks. That's why everyone uses async-RPC, but async-RPC is just a confused metaphor. It's like having an async-mutex! Race-conditions, anyone?
+I might extend with a networking layer, but *not* RPC. RPC sucks. That's why everyone uses async-RPC, but async-RPC is just a confused metaphor. It's like having an async-mutex! Race-conditions, anyone?
