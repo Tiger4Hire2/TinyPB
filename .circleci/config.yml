@@ -13,7 +13,7 @@ jobs:
     # See: https://circleci.com/docs/2.0/configuration-reference/#steps
     steps:
       - checkout
-      - run: apt install -y gcc-10
+      - run: apt install -y g++-10
       - run: "mkdir build"
       - run: "cd build && cmake .."
       - run: "cd build && make"
