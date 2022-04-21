@@ -13,15 +13,9 @@ jobs:
     # See: https://circleci.com/docs/2.0/configuration-reference/#steps
     steps:
       - checkout
-      - makebuilddir:
-          name: "make build space"
-          run: "mkdir build"
-      - config:
-          name: "config"
-          run: "cd build && cmake .."
-      - build:
-          name: "build"
-          run: "cd build && make"
+      - run: "mkdir build"
+      - run: "cd build && cmake .."
+      - run: "cd build && make"
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
