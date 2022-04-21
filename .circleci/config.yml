@@ -19,13 +19,13 @@ jobs:
       - cmake/install
       - makebuilddir:
           name: "make build space"
-          command: "mkdir build"
+          run: "mkdir build"
       - config:
           name: "config"
-          command: "cd build && cmake .."
+          run: "cd build && cmake .."
       - build:
           name: "build"
-          command: "cd build && make"
+          run: "cd build && make"
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
