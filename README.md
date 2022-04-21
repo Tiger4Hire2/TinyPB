@@ -85,21 +85,24 @@ For example... this is what the Address Book example from protobuf looks like. F
         }
     };
 ```
-As it is template-based, this may impact your build times, but it is also
-a) Single pass (no protoc required)
-b) header-only
-It requires C++20, but that is mostly because I wanted to try using ceoncepts. It can easily be ported to C++17, or older (but it gets messy before C++17)
+As it is template-based, this may impact your build times, but it is also  
+a) Single pass (no protoc required)  
+b) header-only  
+It requires C++20, but that is mostly because I wanted to try using concepts. It can easily be ported to C++17, or older (but it gets messy before C++17)
 
 
 # Testing and support
 
-This is "as-is" and definietely WIP. There is a google-test based test for many things, but still no support for
- a) repeated [packed = true]
- b) only supports proto3
- c) the schema output is only PoC, and needs a think
+This is "as-is" and definietely WIP. There is a google-test based test for many things, but still no support for  
+ a) repeated [packed = true]  
+ b) only supports proto3  
+ c) the schema output is only PoC, and needs a think/rethink  
 
 Given the rate of bugs I have found, I would suspect even the things it supports are fragile. (e.g. I have not tested containers other than vectors, etc).
 That said, if you are a C++ programmer, then the problems are in C++, and therefore, you can fix them, so why not try?
 
-# Expiremntal bits
+# Experimntal bits
 I'm going to try and move the project to cmake, as I was using tup. Tup0build is not supported by the free-ci system, so I will write some bad cmake stuff to make it work.
+
+# NOTE:
+It looks like I need to backport it to C++17 to get the ci to work, as C++20==GNUC++2a, which is ancient
