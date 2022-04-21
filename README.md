@@ -101,8 +101,6 @@ This is "as-is" and definietely WIP. There is a google-test based test for many 
 Given the rate of bugs I have found, I would suspect even the things it supports are fragile. (e.g. I have not tested containers other than vectors, etc).
 That said, if you are a C++ programmer, then the problems are in C++, and therefore, you can fix them, so why not try?
 
-# Experimntal bits
-I'm going to try and move the project to cmake, as I was using tup. Tup0build is not supported by the free-ci system, so I will write some bad cmake stuff to make it work.
-
 # NOTE:
 It looks like I need to backport it to C++17 to get the ci to work, as C++20==GNUC++2a, which is ancient
+If you have a compiler from this decade, it should build the tests using cmake.
