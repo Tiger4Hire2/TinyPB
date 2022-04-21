@@ -1,6 +1,7 @@
 #pragma once
 #include <type_traits>
 
+
 template<class T>
 class BasicWrapper {
     static_assert(std::is_integral_v<T>);
