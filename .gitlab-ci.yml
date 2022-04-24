@@ -9,11 +9,11 @@
 # see https://hub.docker.com/_/gcc/
 
 image: gcc
-before_script:
- - apt-get update --yes
- - apt-get install --yes cmake
 
 build:
+  before_script:
+  - apt-get update --yes
+  - apt-get install --yes cmake
   stage: build
   script:
     - mkdir -p build
@@ -25,6 +25,7 @@ build:
       - build/TinyPB
 
 test:
+  needs: build
   stage: test
   script:
     - build/TinyPb
